@@ -37,7 +37,8 @@ const upload = multer({storage});
 
 //mongoose setup
 const PORT = process.env.PORT || 6001;
-mongoose.connect(process.env.MONGO_URL, {
+const MONGO_URL = process.env.MONGO_URL;
+mongoose.connect(MONGO_URL, {
     useNewUrlParser : true,
     useUnifiedTopology : true,
 }).then(() => {
