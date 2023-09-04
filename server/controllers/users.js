@@ -33,7 +33,7 @@ export const getUserFriends = async (req,res) =>{
 //update friends list
 export const addRemoveFriend = async(req, res) => {
     try{
-        const {is, friendId } = req.params;
+        const {id, friendId } = req.params;
         const user = await User.findById(id);
         const friend = await User.findById(friendId);
 
